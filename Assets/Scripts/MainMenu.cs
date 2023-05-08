@@ -7,8 +7,8 @@ public class MainMenu : MonoBehaviour
 {
   public void levelSelect()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-       Debug.Log("Player went to level selection menu");
+    SceneManager.LoadScene("LevelSelection");
+    Debug.Log("Player went to level selection menu");
   }
 
   public void Quit()
