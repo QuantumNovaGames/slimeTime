@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,6 +49,9 @@ public class PlayerController : MonoBehaviour
             if(Input.GetButtonDown("Jump")){
                 isJumping = true;
                 ySpeed = jumpSpeed;
+
+                var audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
             }
         } else {
             characterController.stepOffset = 0;
@@ -55,6 +59,9 @@ public class PlayerController : MonoBehaviour
             {
                 ySpeed = jumpSpeed;
                 jumpTimer += Time.deltaTime;
+
+                var audioSource = GetComponent<AudioSource>();
+                audioSource.Play();
             }
             else
             {
