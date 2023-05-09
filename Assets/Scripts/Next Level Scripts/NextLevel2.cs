@@ -13,12 +13,6 @@ public class NextLevel2 : MonoBehaviour
         gameObject.SetActive(true);
         scoreText.text = "Crystals Collected: " + score.ToString();
     }
-
-    public void NextLevelButton()
-    {
-        SceneManager.LoadScene("Area3");
-    }
-
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu");
